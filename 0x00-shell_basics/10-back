@@ -1,2 +1,3 @@
-#!/bin/bash
-cd ~/tmp
+#!/usr/bin/bash
+cd ..
+
