@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# First Script display 10 times "Best School"
 for i in $(seq 1 10)
 do
     echo "Best School"
