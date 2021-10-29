@@ -6,8 +6,7 @@ do
   if [ $count -eq 4 ]
   then
     echo "bad luck"
-  fi
-  if [ $count -eq 8 ]
+  elif [ $count -eq 8 ]
   then
     echo "god luck"
   fi
