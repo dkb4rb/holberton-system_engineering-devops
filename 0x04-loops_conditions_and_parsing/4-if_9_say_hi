@@ -3,7 +3,6 @@
 declare -i count=0
 until [ $count -eq 10 ]
 do
-    # Declare new conditioon if to display Hi in count -eq to 10
     if [ $count -eq 9 ]
     then
         echo "Hi"
