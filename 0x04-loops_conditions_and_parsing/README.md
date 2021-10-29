@@ -1,2 +1,2 @@
-# Author - Juan Duque <3426@holbertonschool.com>
+# Author - Juan Duque 
 # 0x04-loops_conditions_and_parsing
