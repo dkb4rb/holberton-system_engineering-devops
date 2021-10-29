@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # define new function display 10 times with until statement
-declare -i count=0
+count=0
 while [ $count -lt 10 ]
 do
   if [ $count -eq 9 ]
