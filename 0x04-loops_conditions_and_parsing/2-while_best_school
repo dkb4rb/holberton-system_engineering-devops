@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# define new function display 10 times with while
+declare -i count=0
+while [ $count -lt 10 ]
+do
+    count+=1
+    echo "Holberton School"
+done
