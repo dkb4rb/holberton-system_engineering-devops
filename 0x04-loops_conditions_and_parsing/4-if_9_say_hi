@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # define new function display 10 times with until statement
 declare -i count=0
-until [ $count -lt 10 ]
+while [ $count -lt 10 ]
 do
-    if [ $count -eq 9 ]
-    then
-        echo "Hi"
-    fi
-    echo "Best School"
-    ((count++))
+  if [ $count -eq 9 ]
+  then
+    echo "Hi"
+  fi
+  echo "Holberton School"
+  (( count++ ))
 done
