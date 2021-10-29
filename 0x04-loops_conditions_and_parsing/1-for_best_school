@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
-for i in $(seq 1 10); do  echo "Best School" ; done
+# First Script display 10 times "Best School"
+for i in $(seq 1 10)
+do
+    echo "Best School"
+done
