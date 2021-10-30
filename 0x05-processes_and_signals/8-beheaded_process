@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# display Process Identifier with awk statement
+# Kill Process to infinite beyond.
+# Print i am invincible with SIGTERM trap
+
+pkill -f -SIGKILL 7-highlander
