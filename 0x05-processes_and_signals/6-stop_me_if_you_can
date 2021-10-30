@@ -2,4 +2,4 @@
 # display Process Identifier with awk statement
 # Kill Process to infinite beyond.
 
-pkill --ns $(pgrep bash -l | tail -n2 | awk '{ print $1}' | head -n1)
+pkill --ns "$(pgrep bash -l | tail -n2 | awk '{ print $1}' | head -n1)"
