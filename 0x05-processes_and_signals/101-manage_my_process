@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Script to manage process
 #+  "Usage: manage_my_process {start|stop|restart}"
-
 if [ "$1" == "start" ]
 then
   ./manage_my_process &
