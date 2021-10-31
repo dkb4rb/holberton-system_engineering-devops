@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# define new function display 10 times with until statement
+count=0
+hour=0
+
+while [ $hour -le 12 ]
+do
+  while [ $count -le 59 ]
+  do
+    echo $count
+    case $count in
+      "59")
+        count=0
+        (( hour++))
+        echo "Hour: $hour"
+        ;;
+    esac
+    (( count++ ))
+    sleep 0.5
+  done
+done
