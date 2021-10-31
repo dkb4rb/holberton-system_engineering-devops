@@ -3,17 +3,17 @@
 count=1
 while [ $count -le 20 ]
 do
-  if [ $count == 4 ]
-  then
+  case $count in
+    4)
     echo "bad luck from China"
-  elif [ $count == 9 ]
-  then
+    ;;
+    9)
     echo "bad luck from Japan"
-  elif [ $count == 17 ]
-  then
+    ;;
+    17)
     echo "bad luck from Italy"
-  else
-    echo $count
-  fi
+    ;;
+  esac
+  echo $count
   (( count++ ))
 done
