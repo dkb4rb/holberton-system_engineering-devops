@@ -4,13 +4,13 @@ count=1
 while [ $count -le 20 ]
 do
   case $count in
-    4)
+    "4")
     echo "bad luck from China"
     ;;
-    9)
+    "9")
     echo "bad luck from Japan"
     ;;
-    17)
+    "17")
     echo "bad luck from Italy"
     ;;
   esac
