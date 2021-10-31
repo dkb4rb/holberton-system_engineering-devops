@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # define new function display 10 times with until statement
-echo "$$" > /var/run/myscript.pid
-trap "echo 'I hate the kill command'; rm /var/run/my.pid; exit" SIGTERM
-trap "rm /var/run/my.pid; exit" SIGQUIT
+echo $$ > /var/run/myscript.pid
+trap "echo 'I hate the kill command'; rm -f /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT
 trap "echo 'Y U no love me?!'" SIGINT
-while true; do
-      echo "To infinity and beyond"
-      sleep 2
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
 done
