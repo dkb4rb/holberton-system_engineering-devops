@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# define new function display 10 times with until statement
 if [ -a "school" ]
 then
   echo "school file exists"
