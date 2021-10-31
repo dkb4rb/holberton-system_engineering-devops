@@ -3,8 +3,8 @@
 file=/var/run/myscript.pid
 echo $$ > "$file"
 trap "echo 'Y U no love me?!'" SIGINT
-trap "echo 'I hate the kill command'; rm -rf $file; exit 0;" SIGTERM
-trap "rm -rf $file; exit 0;" SIGQUIT
+trap "echo 'I hate the kill command'; rm -r /var/run/my.pid; exit 0;" SIGTERM
+trap "rm -r /var/run/my.pid; exit 0;" SIGQUIT
 while true
 do
 	echo 'To infinity and beyond'
