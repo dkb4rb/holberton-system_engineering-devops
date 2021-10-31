@@ -5,15 +5,11 @@ hour=0
 
 while [ $hour -le 12 ]
 do
+  echo "Hour: $hour"
   count=1
   while [ $count -le 59 ]
   do
     echo $count
-    case $count in
-      "59")
-        echo "Hour: $hour"
-        ;;
-    esac
     (( count++ ))
   done
   (( hour++))
