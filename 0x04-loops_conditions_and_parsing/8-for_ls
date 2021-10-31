@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# define new function display 10 times with until statement
+list=$(ls)
+
+for i in $list
+do
+  echo "$i" | cut -d '-' -f2
+done
