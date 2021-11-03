@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+nc -lvp 98
