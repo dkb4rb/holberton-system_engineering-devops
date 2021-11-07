@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Vien Your adapter ethernet ip
 ifconfig | grep -E "inet " | awk '{print $2}'
