@@ -4,7 +4,7 @@ This repository contains programs to learning news concepts to DevOps
 
 * [0x0. shell_basics - Shell](./0x00-shell_basics)
 * [0x1. shell_permissions - Shell](./0x01-shell_permissions)
-* [0x2. shell_redirections - Shell](./0x02-shell_redirections
+* [0x2. shell_redirections - Shell](./0x02-shell_redirections)
 * [0x3. shell_variables_expansions - Shell](./0x03-shell_variables_expansions)
 * [0x4. loops_conditions_and_parsing - Shell](./0x04-loops_conditions_and_parsings)
 * [0x5. processes_and_signals - Shell](./0x05-processes_and_signals)
