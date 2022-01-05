@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Bash script to establishing a new connection to ssh server
 
-ssh -l ~/.ssh/school ubuntu@35.231.143.181
+ssh -i ~/.ssh/school ubuntu@35.231.143.181
