@@ -1,0 +1,4 @@
+#/usr/bin/env bash
+#Bash script to generate new ssh RSA
+
+ssh-keyge -b 4096 -f school -p betty -t rsa
