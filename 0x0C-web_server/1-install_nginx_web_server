@@ -11,8 +11,11 @@ function dependences(){
 	if [ "$(echo $?)" -eq 1 ]; then
 		apt-get update
 		apt-get install -y nginx
+		config_response
+
 	else
 		service nginx start
+		config_response
 	fi
 }
 
@@ -27,7 +30,6 @@ function config_response(){
 #Function main is the init to all functions
 function main(){
 	dependences;
-	config_response;
 }
 
 # Declare the flush to progam
