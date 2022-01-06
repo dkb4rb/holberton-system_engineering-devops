@@ -19,6 +19,9 @@
 Include /etc/ssh/ssh_config.d/*.conf
 
 Host *
+Host 35.196.128.244
+HostName 35.196.128.244
+User ubuntu
 #   ForwardAgent no
 #   ForwardX11 no
 #   ForwardX11Trusted yes
@@ -34,12 +37,11 @@ Host *
 #   ConnectTimeout 0
 #   StrictHostKeyChecking ask
    IdentityFile ~/.ssh/school
-   IdentityFile ~/.ssh/school.pub
 #   IdentityFile ~/.ssh/id_dsa
 #   IdentityFile ~/.ssh/id_ecdsa
 #   IdentityFile ~/.ssh/id_ed25519
-   Port 22
-   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   Port 22
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
 #   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
 #   EscapeChar ~
 #   Tunnel no
