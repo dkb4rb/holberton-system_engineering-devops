@@ -12,8 +12,6 @@ function dependences(){
 		apt-get update
 		apt-get install -y nginx
 	else
-#		echo "[!] Iniciando servidor"
-		sleep 1
 		service nginx start
 	fi
 }
@@ -21,16 +19,8 @@ function dependences(){
 # The function execute one configuration to nginx server to http response
 # to curl comman the result is Hello World!
 function config_response(){
-	mkdir /etc/nginx/html
-	touch /etc/nginx/html/index.html
-	echo "Hello World!" > /etc/nginx/html/index.html
-	printf %s "server {
-	     listen      80 default_server;
-	     listen      [::]:80 default_server;
-	     root        /etc/nginx/html;
-	     index       index.html index.htm;
-	}
-	" > /etc/nginx/sites-available/default
+	sudo chmod 777 /var/www/html/index.nginx-debian.html
+	echo "Hello World!" > /var/www/html/index.nginx-debian.html
 	service nginx restart
 }
 
