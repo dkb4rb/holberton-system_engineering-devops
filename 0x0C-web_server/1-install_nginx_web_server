@@ -1,19 +1,6 @@
 #!/usr/bin/env bash
-#This script install Nginx Server
-
-function new_response(){
-	echo "Hello World" | sudo tee /var/www/html/index.html
-	service nginx start
-	}
-
-function dep(){
-	sudo apt-get update
-	sudo apt-get install -y nginx
-	}
-
-function main(){
-	dep;
-	new_response;
-	}
-
-main;
+#Install NGINX in my server, listening on port 80
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Hello World" > /var/www/html/index.html
+sudo service nginx restart
