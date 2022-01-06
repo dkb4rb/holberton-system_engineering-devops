@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#This script install Nginx Server
+
+function new_response(){
+	echo "Hello World" | sudo tee /var/www/html/index.html
+	service nginx start
+	}
+
+function dep(){
+	sudo apt-get update
+	sudo apt-get install -y nginx
+	}
+
+function main(){
+	dep;
+	new_response;
+	}
+
+main;
