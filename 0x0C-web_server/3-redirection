@@ -6,7 +6,7 @@ apt-get update
 apt-get install -y nginx
 sudo chown -R "$USER":"$USER" /var/www/
 sudo chown -R "$USER":"$USER" /etc/nginx/
-echo "Hello World" > /var/www/html/index.html
+echo "Hello World" > /var/www/html/index.html >/dev/null
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
