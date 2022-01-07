@@ -17,4 +17,4 @@ printf %s "server {
         return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw ;
     }
 }" > /etc/nginx/sites-enabled/default
-service nginx restart
+sudo service nginx restart
