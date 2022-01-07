@@ -6,6 +6,7 @@ apt-get update
 apt-get install -y nginx
 sudo chown -R "$USER":"$USER" /var/www
 sudo chown -R "$USER":"$USER" /etc/nginx
+sudo chmod 777 /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/ /var/www /etc/nginx
 echo "Ceci n'est pas une page" > /var/www/html/404.html > /dev/null
 echo "Hello World" > /var/www/html/index.html >/dev/null
 printf %s "server {
