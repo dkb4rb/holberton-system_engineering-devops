@@ -13,8 +13,8 @@ printf %s "server {
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {
-      echo 'header("HTTP/1.1 301 Moved Permanently");'>> /var/www/html/index.html;
+      echo 'header("HTTP/1.1 301 Moved Permanently");'>>  /etc/nginx/sites-available/default ;
     }
-}" > /var/www/html/index.html
+}" >  /etc/nginx/sites-available/default
 
 service nginx restart
