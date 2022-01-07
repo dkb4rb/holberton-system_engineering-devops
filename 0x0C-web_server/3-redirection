@@ -13,7 +13,7 @@ printf %s "server {
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {
-        return 301 Moved Permanently;
+        return 301 Moved Permanently http://cuberule.com ;
     }
 }" > /etc/nginx/sites-available/default
 
