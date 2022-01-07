@@ -15,5 +15,5 @@ printf %s "server {
     location /redirect_me {
         return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw permanent;
     }
-}" > /etc/nginx/sites-available/default
-service nginx start
+}" > /etc/nginx/sites-enabled/default
+service nginx restart
