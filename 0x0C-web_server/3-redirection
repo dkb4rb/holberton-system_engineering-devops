@@ -12,7 +12,7 @@ printf %s "server {
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw ;
+        return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw permanent;
     }
-}" > /etc/nginx/sites-enabled/default
-service nginx restart
+}" > /etc/nginx/sites-available/default
+sudo service nginx restart
