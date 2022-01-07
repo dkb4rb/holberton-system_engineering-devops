@@ -4,9 +4,10 @@
 
 apt-get update
 apt-get install -y nginx
+ufw allow 80
 sudo chown -R "$USER":"$USER" /var/www
 sudo chown -R "$USER":"$USER" /etc/nginx
-sudo chmod 777 /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/
+
 echo "Hello World" > /var/www/html/index.html >/dev/null
 printf %s "server {
     listen 80;
@@ -14,7 +15,7 @@ printf %s "server {
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw ;
+        return 301 https://www.youtube.com/watch?v=EgBJmlPo8Xw permanent;
     }
-}" > /etc/nginx/sites-enabled/default
+}" > /etc/nginx/sites-available/default
 sudo service nginx restart
