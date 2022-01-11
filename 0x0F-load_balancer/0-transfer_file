@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script execute one oneliner what trasnfer one file
+# 	Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
+# 		PATH_TO_FILE : equal to filename to transfer
+# 		IP : host to transfer file
+# 		USERNAME : username of the host or server
+# 		PATH_TO_SSH_KEY : file to rsa key to create new connection
+#	Example:
+#		./0-transfer_file index.html 8.8.8.8 pwd ~/.ssh/id_rsa
+
+if [ $# -lt 4 ]; then
+  echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+  scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2":~
+fi
