@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Configure one load balancer to Haproxy
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo chmod 777 /etc/haproxy/haproxy.cfg
+echo "
+frontend load_balancer
+    bind *:80
+    default_backend 3428servers
+
+backend 3428servers
+    balance roundrobin
+    server 3428-web-01 35.196.128.244:80 check
+    server 3428-web-02 34.235.116.181:80 check" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
