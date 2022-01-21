@@ -33,18 +33,22 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend http_front
-        bind *:80
+frontend https_front
         bind *:443 ssl crt /etc/letsencrypt/live/www.dkb4rb.tech/all.pem
-        redirect scheme https code 301 if !{ ssl_fc }
-        default_backend web_backend
+        reqadd X-Forwarded-Proto:\ https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
+        default_backend web_backend
+
+frontend http_front
+        bind *:80
+        reqadd X-Forwarded-Proto:\ http
+        default_backend web_backend
 
 backend web_backend
         balance roundrobin
-        server 3428-web-01 34.73.121.48:80 check
-        server 3428-web-02 34.235.116.181:80 check
+        server web-01 34.73.121.48:80 check
+        server web-02 34.235.116.181:80 check
 
 backend letsencrypt-backend
         server letsencrypt *:54321
