@@ -33,10 +33,12 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend load_balancer
-    bind *:80
-    default_backend 3428servers
-backend 3428servers
-    balance roundrobin
-    server 3428-web-01 35.196.128.244:80 check
-    server 3428-web-02 34.235.116.181:80 check
+frontend http_front
+        bind *:80
+        bind *:443 ssl crt /etc/letsencrypt/live/www.dkb4rb.tech/all.pem
+        use_backend web_backend
+
+backend web_backend
+        balance roundrobin
+        server 3428-web-01 34.73.121.48:80 check
+        server 3428-web-02 34.235.116.181:80 check
