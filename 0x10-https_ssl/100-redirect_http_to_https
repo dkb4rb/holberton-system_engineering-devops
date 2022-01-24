@@ -46,6 +46,7 @@ frontend http_front
         bind 0.0.0.0:80
         reqadd X-Forwarded-Proto:\ http
         default_backend web_backend
+        redirect scheme https code 301 if !{ ssl_fc }
 
 backend web_backend
         balance roundrobin
