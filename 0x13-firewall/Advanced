@@ -1,0 +1,22 @@
+#!/bin/bash
+#Configure ufw so that it blocks all incoming traffic, except the following TCP ports:
+#
+#    22 (SSH)
+#    443 (HTTPS SSL)
+#    80 (HTTP)
+
+if [ "$(id -u)" -eq "0" ]; then
+
+	sudo apt-get update && sudo apt-get upgrade -y
+	sudo apt-get install ufw -y
+
+	command=("allow http", "allow https", "allow ssh")
+
+	for rules in "${command[@]}";
+	do
+		ufw $rules
+	done
+	ufw enable
+else
+	echo "You Need Root Permissions"
+fi

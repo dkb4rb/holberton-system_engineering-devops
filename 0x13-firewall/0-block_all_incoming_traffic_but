@@ -5,17 +5,10 @@
 #    443 (HTTPS SSL)
 #    80 (HTTP)
 
-if [ "$(id -u)" -eq "0" ]; then
+command=("allow http" "allow https" "allow ssh")
 
-	sudo apt-get install ufw -y
-
-	command=("allow http", "allow https", "allow ssh")
-
-	for rules in "${command[@]}";
-	do
-		ufw $rules
-	done
-	ufw enable
-else
-	echo "You Need Root Permissions"
-fi
+for rules in "${command[@]}";
+do
+	ufw "$rules"
+done
+ufw enable
