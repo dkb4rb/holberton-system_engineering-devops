@@ -4,11 +4,12 @@
 #    22 (SSH)
 #    443 (HTTPS SSL)
 #    80 (HTTP)
+apt-get install ufw -y
 
 command=("allow http" "allow https" "allow ssh")
 
 for rules in "${command[@]}";
 do
-	ufw "$rules"
+	ufw $rules
 done
 ufw enable
