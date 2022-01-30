@@ -37,6 +37,6 @@ log-error       = /var/log/mysql/error.log
 symbolic-links=0
 
 # Configuration to master slave replication mysql server
-# bind-address  = 34.235.116.181
+# bind-address  = 18.234.211.84
 server-id = 2
 log_bin = /var/log/mysql/mysql-bin.log
